@@ -83,3 +83,4 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet test-issue for end-to-end validering: #5.
 - Opprettet branch `codex/sdlc-flow-validation` for PR-baserte testendringer.
 - Lagt til `docs/PROCESS_VALIDATION.md` som sporbarhetsdokument for flyt-test.
+- Fikset PR-check feil i `security.yml`: satte `actions/checkout` til `fetch-depth: 0` i Gitleaks-jobb for korrekt commit-range i pull_request-kjøring.
