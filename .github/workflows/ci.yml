@@ -22,7 +22,7 @@ jobs:
           fi
 
       - name: Lint Markdown
-        uses: DavidAnson/markdownlint-cli2-action@v18
+        uses: DavidAnson/markdownlint-cli2-action@v22
         with:
           globs: |
             **/*.md
