@@ -1,0 +1,67 @@
+name: Deploy Dev
+
+on:
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Git ref to deploy (branch, tag, or SHA)
+        required: false
+        default: main
+      dry_run:
+        description: Run without applying deployment changes
+        required: true
+        type: boolean
+        default: true
+
+permissions:
+  contents: read
+  id-token: write
+
+concurrency:
+  group: deploy-dev
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment: dev
+    env:
+      AWS_REGION: ${{ vars.AWS_REGION || 'eu-west-1' }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          ref: ${{ inputs.ref }}
+
+      - name: Dry run summary
+        if: ${{ inputs.dry_run }}
+        run: |
+          echo "Dry run active."
+          echo "Ref: ${{ inputs.ref }}"
+          echo "Environment: dev"
+          echo "Region: ${AWS_REGION}"
+
+      - name: Validate AWS configuration
+        if: ${{ !inputs.dry_run }}
+        run: |
+          set -euo pipefail
+          if [ -z "${{ secrets.AWS_ROLE_ARN }}" ]; then
+            echo "Missing secret AWS_ROLE_ARN in environment dev" >&2
+            exit 1
+          fi
+
+      - name: Configure AWS credentials (OIDC)
+        if: ${{ !inputs.dry_run }}
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          role-to-assume: ${{ secrets.AWS_ROLE_ARN }}
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Verify AWS identity
+        if: ${{ !inputs.dry_run }}
+        run: aws sts get-caller-identity
+
+      - name: Deploy placeholder
+        if: ${{ !inputs.dry_run }}
+        run: |
+          echo "Replace with real deploy command (Terraform/app deploy)."

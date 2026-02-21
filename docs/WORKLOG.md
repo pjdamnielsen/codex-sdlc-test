@@ -67,3 +67,9 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `CHANGELOG.md` med initial release-notat.
 - Opprettet `.github/workflows/release.yml` for automatisk GitHub Release ved semver-tag.
 - Opprettet `docs/RELEASES.md` med standard release-flyt.
+
+### Deploy-baseline (dev)
+- Opprettet `.github/workflows/deploy-dev.yml` med manuell deployflyt til environment `dev`.
+- La inn `dry_run` som standard for sikker første validering.
+- Forberedte workflowen for AWS OIDC via `AWS_ROLE_ARN` (environment secret).
+- Opprettet `docs/DEPLOYMENT.md` med setup og kjøreinstruks.
