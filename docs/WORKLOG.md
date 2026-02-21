@@ -78,3 +78,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `.github/workflows/deploy-stage.yml` for stage-miljø.
 - Opprettet `.github/workflows/deploy-prod.yml` for prod-miljø med ekstra `confirm=DEPLOY` ved faktisk deploy.
 - Oppdatert `docs/DEPLOYMENT.md` med environment-oppsett for `dev`, `stage` og `prod`.
+
+### SDLC flyt-validering
+- Opprettet test-issue for end-to-end validering: #5.
+- Opprettet branch `codex/sdlc-flow-validation` for PR-baserte testendringer.
+- Lagt til `docs/PROCESS_VALIDATION.md` som sporbarhetsdokument for flyt-test.
