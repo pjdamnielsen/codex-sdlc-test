@@ -59,3 +59,4 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `.github/workflows/security.yml` med CodeQL + Gitleaks.
 - Opprettet `.github/dependabot.yml` for ukentlige GitHub Actions-oppdateringer.
 - Opprettet `docs/CI_CD.md` med branch protection-oppsett og videre deploy-plan.
+- Justerte CI workflow: byttet `rhysd/actionlint` fra `@v1` til eksisterende tag `@v1.7.11` etter setup-feil i GitHub Actions.
