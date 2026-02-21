@@ -48,3 +48,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
   - Runbook Incident (ID: 393248)
   - Onboarding (ID: 98309)
   - Retrospektiv Mal (ID: 98324)
+
+### Confluence auto-sync
+- Opprettet `scripts/confluence_sync.py` for create/update av Confluence-sider fra `docs/confluence/`.
+- Opprettet GitHub Actions-workflow `.github/workflows/confluence-sync.yml`.
+- Opprettet `docs/CONFLUENCE_SYNC.md` med setup og runbook for secrets + manuell kjøring.
