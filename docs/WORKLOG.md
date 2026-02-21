@@ -96,3 +96,7 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet ny Confluence-kildeside: `docs/confluence/70-DELIVERY-CONTRACT.md`.
 - Oppdatert Confluence sync-script for å inkludere siden automatisk.
 - Oppdatert Space Home med quick link til Delivery Contract.
+
+### PR pre-flight
+- Oppdatert `.github/pull_request_template.md` med Delivery Contract pre-flight checklist.
+- Lagt inn direkte referanse til `docs/confluence/70-DELIVERY-CONTRACT.md`.
