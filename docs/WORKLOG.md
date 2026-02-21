@@ -61,3 +61,9 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `docs/CI_CD.md` med branch protection-oppsett og videre deploy-plan.
 - Justerte CI workflow: byttet `rhysd/actionlint` fra `@v1` til eksisterende tag `@v1.7.11` etter setup-feil i GitHub Actions.
 - Justerte CI markdown-sjekk fra markdownlint til robust filvalidering (UTF-8 + ikke tom fil) for stabil baseline i tidlig fase.
+
+### Release-baseline
+- Opprettet `VERSION` med initial versjon `0.1.0`.
+- Opprettet `CHANGELOG.md` med initial release-notat.
+- Opprettet `.github/workflows/release.yml` for automatisk GitHub Release ved semver-tag.
+- Opprettet `docs/RELEASES.md` med standard release-flyt.

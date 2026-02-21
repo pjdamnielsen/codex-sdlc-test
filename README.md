@@ -10,4 +10,7 @@ Testrepo for SDLC-oppsett styrt fra Codex.
 - `/Users/pjdn/Documents/Codex projects/docs/confluence/`: ferdig sideoppsett som kan limes inn i Confluence Space.
 - `/Users/pjdn/Documents/Codex projects/docs/CONFLUENCE_SYNC.md`: oppsett for automatisk synk mellom repo og Confluence.
 - `/Users/pjdn/Documents/Codex projects/docs/CI_CD.md`: CI/CD- og sikkerhetsbaseline, inkludert branch protection.
+- `/Users/pjdn/Documents/Codex projects/docs/RELEASES.md`: versjonering og release-flyt.
+- `/Users/pjdn/Documents/Codex projects/CHANGELOG.md`: historikk over versjoner og endringer.
+- `/Users/pjdn/Documents/Codex projects/VERSION`: gjeldende semver.
 - `/Users/pjdn/Documents/Codex projects/CONTRIBUTING.md`: arbeidsmåte, branch/PR-regler og kvalitetskrav.
