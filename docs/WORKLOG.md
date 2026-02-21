@@ -32,3 +32,19 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `.github/ISSUE_TEMPLATE/config.yml` for å deaktivere blank issues.
 - Opprettet `.github/pull_request_template.md` med kvalitets- og dokumentasjonssjekker.
 - Opprettet `docs/TICKETS.md` med anbefalt board-oppsett og arbeidsregler.
+
+### Confluence-oppsett (innholdspakke)
+- Opprettet `docs/confluence/` med ferdige sider for Space Home, SDLC-prosess, arkitektur, ADR-mal, incident-runbook, onboarding og retrospektiv.
+- Oppdatert `README.md` med referanse til Confluence-oppsettet.
+- Pakken er laget for enkel copy/paste inn i Confluence UI.
+
+### Confluence publisering
+- Publiserte sidehierarki til Confluence space `SD` via API.
+- Opprettet/oppdatert sider:
+  - SDLC Space Home (ID: 393217)
+  - SDLC Prosess (ID: 393233)
+  - Arkitektur (ID: 294915)
+  - ADR Template (ID: 425985)
+  - Runbook Incident (ID: 393248)
+  - Onboarding (ID: 98309)
+  - Retrospektiv Mal (ID: 98324)
