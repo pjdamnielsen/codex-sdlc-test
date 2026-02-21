@@ -19,6 +19,7 @@ PAGES = [
     ("Runbook Incident", "40-RUNBOOK-INCIDENT.md", "SDLC Space Home"),
     ("Onboarding", "50-ONBOARDING.md", "SDLC Space Home"),
     ("Retrospektiv Mal", "60-RETRO-TEMPLATE.md", "SDLC Space Home"),
+    ("Delivery Contract", "70-DELIVERY-CONTRACT.md", "SDLC Space Home"),
 ]
 
 

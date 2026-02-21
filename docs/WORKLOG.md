@@ -91,3 +91,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Oppdaterte Arkitektur med nåværende plattformdesign og sikkerhetsmodell.
 - Oppdaterte Onboarding med konkrete steg for dette prosjektet.
 - Synket oppdateringene til Confluence space `SD`.
+
+### Delivery Contract
+- Opprettet ny Confluence-kildeside: `docs/confluence/70-DELIVERY-CONTRACT.md`.
+- Oppdatert Confluence sync-script for å inkludere siden automatisk.
+- Oppdatert Space Home med quick link til Delivery Contract.

@@ -20,6 +20,7 @@ Følgende er satt opp og verifisert:
 - Runbook Incident
 - Onboarding
 - Retrospektiv
+- Delivery Contract
 
 ## Repo og tickets
 - Repo: `https://github.com/pjdamnielsen/codex-sdlc-test`
