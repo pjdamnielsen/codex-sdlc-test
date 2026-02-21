@@ -1,3 +1,4 @@
 .auth/
 .confluence.env
+.github.env
 .DS_Store
