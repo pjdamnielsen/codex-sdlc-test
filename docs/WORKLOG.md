@@ -26,3 +26,9 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - hva som ble gjort
 - hvorfor det ble gjort
 - hvilken fil/prosess som ble påvirket
+
+### GitHub ticketsystem
+- Opprettet issue templates for bug, feature og task i `.github/ISSUE_TEMPLATE/`.
+- Opprettet `.github/ISSUE_TEMPLATE/config.yml` for å deaktivere blank issues.
+- Opprettet `.github/pull_request_template.md` med kvalitets- og dokumentasjonssjekker.
+- Opprettet `docs/TICKETS.md` med anbefalt board-oppsett og arbeidsregler.
