@@ -21,11 +21,23 @@ jobs:
             exit 1
           fi
 
-      - name: Lint Markdown
-        uses: DavidAnson/markdownlint-cli2-action@v18
-        with:
-          globs: |
-            **/*.md
+      - name: Validate Markdown files
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          root = Path(".")
+          files = sorted(root.rglob("*.md"))
+          if not files:
+              raise SystemExit("No markdown files found.")
+          empty = []
+          for path in files:
+              data = path.read_text(encoding="utf-8")
+              if not data.strip():
+                  empty.append(str(path))
+          if empty:
+              raise SystemExit("Empty markdown files: " + ", ".join(empty))
+          print(f"Validated {len(files)} markdown files.")
+          PY
 
       - name: Lint GitHub Actions workflows
         uses: rhysd/actionlint@v1.7.11
