@@ -53,3 +53,9 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `scripts/confluence_sync.py` for create/update av Confluence-sider fra `docs/confluence/`.
 - Opprettet GitHub Actions-workflow `.github/workflows/confluence-sync.yml`.
 - Opprettet `docs/CONFLUENCE_SYNC.md` med setup og runbook for secrets + manuell kjøring.
+
+### CI/CD og sikkerhetsbaseline
+- Opprettet `.github/workflows/ci.yml` med quality-gates for repo-hygiene, markdownlint og actionlint.
+- Opprettet `.github/workflows/security.yml` med CodeQL + Gitleaks.
+- Opprettet `.github/dependabot.yml` for ukentlige GitHub Actions-oppdateringer.
+- Opprettet `docs/CI_CD.md` med branch protection-oppsett og videre deploy-plan.

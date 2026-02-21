@@ -1,0 +1,31 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  quality:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate repository hygiene
+        run: |
+          set -euo pipefail
+          if git ls-files | grep -E '(^\.confluence\.env$|^\.auth/)'; then
+            echo "Forbidden secret file tracked in git index." >&2
+            exit 1
+          fi
+
+      - name: Lint Markdown
+        uses: DavidAnson/markdownlint-cli2-action@v18
+        with:
+          globs: |
+            **/*.md
+
+      - name: Lint GitHub Actions workflows
+        uses: rhysd/actionlint@v1
