@@ -84,3 +84,10 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet branch `codex/sdlc-flow-validation` for PR-baserte testendringer.
 - Lagt til `docs/PROCESS_VALIDATION.md` som sporbarhetsdokument for flyt-test.
 - Fikset PR-check feil i `security.yml`: satte `actions/checkout` til `fetch-depth: 0` i Gitleaks-jobb for korrekt commit-range i pull_request-kjøring.
+
+### Forbedret Confluence-innhold
+- Oppdaterte Space Home med konkret status for faktisk etablert oppsett (GitHub, tickets, CI/security, release, deploy).
+- Oppdaterte SDLC Prosess med reell issue->PR->merge flyt og aktive kvalitetsporter.
+- Oppdaterte Arkitektur med nåværende plattformdesign og sikkerhetsmodell.
+- Oppdaterte Onboarding med konkrete steg for dette prosjektet.
+- Synket oppdateringene til Confluence space `SD`.

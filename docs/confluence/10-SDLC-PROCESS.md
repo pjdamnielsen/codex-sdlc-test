@@ -1,30 +1,45 @@
 # SDLC Prosess
 
-## 1. Plan
-- Opprett issue (bug/feature/task)
-- Definer scope og akseptansekriterier
+## Flyt i praksis
 
-## 2. Design
-- Beskriv teknisk løsning kort
-- Opprett ADR ved større beslutninger
+1. Opprett issue i GitHub (Bug/Feature/Task)
+2. Lag branch fra `main`
+3. Gjør endring + oppdater docs
+4. Opprett PR med `Closes #<issue>`
+5. Vent på checks (`quality`, `CodeQL`, `Gitleaks`)
+6. Få review og merge PR
+7. Verifiser at issue er lukket automatisk
 
-## 3. Build
-- Jobb på branch (`feat/*` eller `fix/*`)
-- Små, testbare commits
+## Etablert kontrollnivå
 
-## 4. Verify
-- Kjør lint/test/typecheck
-- Oppdater dokumentasjon i samme PR
+- Branch protection på `main`:
+  - PR påkrevd
+  - minst 1 approval
+  - required checks påkrevd
+- Security checks:
+  - CodeQL
+  - Gitleaks
+  - Dependabot updates
+- Dokumentasjon:
+  - Worklog i repo
+  - Confluence sync workflow
 
-## 5. Release
-- Merge til `main`
-- Oppdater release-notater
+## Release-flyt
 
-## 6. Operate
-- Overvåkning, hendelser, forbedringer
+1. Oppdater `VERSION`
+2. Oppdater `CHANGELOG.md`
+3. Push tag `vX.Y.Z`
+4. `Release`-workflow oppretter GitHub Release
+
+## Deploy-flyt
+
+- `Deploy Dev`: manuell, støtter dry-run
+- `Deploy Stage`: manuell, støtter dry-run
+- `Deploy Prod`: manuell, krever `confirm=DEPLOY` ved faktisk deploy
 
 ## Kvalitetsporter
-- Grønn CI
-- PR-review
-- Oppdatert docs
-- Ingen kritiske sikkerhetsfunn
+
+- Grønn `quality`
+- Grønn `CodeQL`
+- Grønn `Gitleaks`
+- Minst én reviewer før merge
