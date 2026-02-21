@@ -2,6 +2,8 @@
 
 Dette Space-et er sannhetskilde for prosess, drift og beslutninger for `codex-sdlc-test`.
 
+Denne siden synkroniseres automatisk fra GitHub-repoet.
+
 ## Quick links
 - SDLC prosess
 - Arkitektur
