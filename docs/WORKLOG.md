@@ -73,3 +73,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - La inn `dry_run` som standard for sikker første validering.
 - Forberedte workflowen for AWS OIDC via `AWS_ROLE_ARN` (environment secret).
 - Opprettet `docs/DEPLOYMENT.md` med setup og kjøreinstruks.
+
+### Deploy-utvidelse (stage/prod)
+- Opprettet `.github/workflows/deploy-stage.yml` for stage-miljø.
+- Opprettet `.github/workflows/deploy-prod.yml` for prod-miljø med ekstra `confirm=DEPLOY` ved faktisk deploy.
+- Oppdatert `docs/DEPLOYMENT.md` med environment-oppsett for `dev`, `stage` og `prod`.
