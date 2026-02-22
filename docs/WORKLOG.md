@@ -125,3 +125,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet ADR-regime (`docs/adr/`) med template og index.
 - Oppdatert CI med ADR-krav ved arkitektur-/kontraktendringer.
 - Opprettet Confluence-rutine for timing av tiltak 5-9 (`90-SCALING-GOVERNANCE-ROUTINE.md`).
+
+### Project bootstrap package
+- Opprettet `scripts/bootstrap_project.sh` for å opprette nye prosjekter med SDLC-baseline.
+- Opprettet `docs/PROJECT_BOOTSTRAP.md` med bruksguide og ettersteg.
+- Scriptet initialiserer nytt repo på `main`, kan sette remote, og filtrerer ut lokale secret-filer.
