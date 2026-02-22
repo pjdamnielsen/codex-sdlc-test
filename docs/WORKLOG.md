@@ -130,3 +130,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet `scripts/session_preflight.sh` for obligatorisk prosjektkontekst-sjekk i starten av hver ny tråd.
 - Opprettet `docs/SESSION_PREFLIGHT.md` med rutine og arbeidsregel.
 - Opprettet Confluence-kilde `docs/confluence/95-SESSION-PREFLIGHT.md`.
+
+### Project bootstrap package
+- Opprettet `scripts/bootstrap_project.sh` for å opprette nye prosjekter med SDLC-baseline.
+- Opprettet `docs/PROJECT_BOOTSTRAP.md` med bruksguide og ettersteg.
+- Scriptet initialiserer nytt repo på `main`, kan sette remote, og filtrerer ut lokale secret-filer.
