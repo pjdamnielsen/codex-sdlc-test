@@ -14,6 +14,10 @@ Denne siden er arbeidsavtalen for hvordan vi samarbeider for høy kvalitet og fo
 - Vi jobber med én tydelig leveranseblokk om gangen.
 - Scope-endringer må prioriteres eksplisitt før de tas inn.
 
+0. Session pre-flight
+- Hver ny Codex-tråd starter med prosjektkontekst-sjekk via `scripts/session_preflight.sh`.
+- Ingen kodeendringer før pre-flight bekrefter korrekt workspace/repo/branch.
+
 2. Obligatorisk issue-ramme før kode
 - Hver sak skal ha:
   - problem/mål

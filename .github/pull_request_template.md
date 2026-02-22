@@ -1,4 +1,5 @@
 ## Delivery Contract Pre-Flight
+- [ ] Session pre-flight completed (`scripts/session_preflight.sh`)
 - [ ] Scope is explicit (what is in/out for this PR)
 - [ ] Acceptance criteria are clear and testable
 - [ ] Linked issue contains goal + DoD
