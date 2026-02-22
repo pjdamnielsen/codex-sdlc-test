@@ -111,3 +111,7 @@ Denne filen dokumenterer konkrete endringer i repoet.
   - PR-policy som krever test-/kontrakt-/docs-endring ved app `src`-endring
 - Opprettet repo-template for nye webapper under `templates/web-app/`.
 - Opprettet `docs/WEB_APP_ENGINEERING_STANDARD.md` som repo-referanse.
+
+### App bootstrap checklist
+- Opprettet ny issue-template: `.github/ISSUE_TEMPLATE/new_app_bootstrap.md`.
+- Template håndhever obligatoriske pre-code artefakter, template-init, test/TDD-plan og kontrakt/arkitektur-checkpoints.

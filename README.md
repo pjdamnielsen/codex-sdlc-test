@@ -15,6 +15,7 @@ Testrepo for SDLC-oppsett styrt fra Codex.
 - `/Users/pjdn/Documents/Codex projects/docs/DEPLOYMENT.md`: deploy-baseline for `dev` med AWS OIDC-klargjøring.
 - `/Users/pjdn/Documents/Codex projects/docs/PROCESS_VALIDATION.md`: dokumentasjon av testet issue->PR->merge flyt.
 - `/Users/pjdn/Documents/Codex projects/templates/web-app/`: repo-template for nye webapper.
+- `/Users/pjdn/Documents/Codex projects/.github/ISSUE_TEMPLATE/new_app_bootstrap.md`: oppstartschecklist for nye app-initiativer.
 - `/Users/pjdn/Documents/Codex projects/CHANGELOG.md`: historikk over versjoner og endringer.
 - `/Users/pjdn/Documents/Codex projects/VERSION`: gjeldende semver.
 - `/Users/pjdn/Documents/Codex projects/CONTRIBUTING.md`: arbeidsmåte, branch/PR-regler og kvalitetskrav.
