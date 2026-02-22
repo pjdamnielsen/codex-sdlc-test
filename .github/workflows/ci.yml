@@ -21,6 +21,21 @@ jobs:
             exit 1
           fi
 
+      - name: Validate engineering standard files
+        run: |
+          set -euo pipefail
+          required=(
+            "docs/confluence/70-DELIVERY-CONTRACT.md"
+            "docs/confluence/80-WEB-APP-ENGINEERING-STANDARD.md"
+            "templates/web-app/README.md"
+          )
+          for file in "${required[@]}"; do
+            if [ ! -f "$file" ]; then
+              echo "Missing required engineering standard file: $file" >&2
+              exit 1
+            fi
+          done
+
       - name: Validate Markdown files
         run: |
           python3 - <<'PY'
@@ -37,6 +52,51 @@ jobs:
           if empty:
               raise SystemExit("Empty markdown files: " + ", ".join(empty))
           print(f"Validated {len(files)} markdown files.")
+          PY
+
+      - name: Enforce src-to-test-or-contract change policy
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=200 origin "${BASE_SHA}" "${HEAD_SHA}" || true
+          python3 - <<'PY'
+          import os
+          import re
+          import subprocess
+          import sys
+
+          base = os.environ["BASE_SHA"]
+          head = os.environ["HEAD_SHA"]
+          diff_cmd = ["git", "diff", "--name-only", f"{base}...{head}"]
+          changed = subprocess.check_output(diff_cmd, text=True).splitlines()
+
+          src_re = re.compile(r"^apps/([^/]+)/src/")
+          ok_re = re.compile(r"^apps/([^/]+)/(tests/|contracts/)")
+          doc_re = re.compile(r"^apps/([^/]+)/docs/")
+
+          apps_with_src_changes = set()
+          apps_with_supporting_changes = set()
+
+          for path in changed:
+            m_src = src_re.match(path)
+            if m_src:
+              apps_with_src_changes.add(m_src.group(1))
+            m_ok = ok_re.match(path)
+            if m_ok:
+              apps_with_supporting_changes.add(m_ok.group(1))
+            m_doc = doc_re.match(path)
+            if m_doc:
+              apps_with_supporting_changes.add(m_doc.group(1))
+
+          missing = sorted(apps_with_src_changes - apps_with_supporting_changes)
+          if missing:
+            raise SystemExit(
+              "App code changed without tests/contracts/docs updates for: " + ", ".join(missing)
+            )
+          print("Src-to-test-or-contract policy passed.")
           PY
 
       - name: Lint GitHub Actions workflows

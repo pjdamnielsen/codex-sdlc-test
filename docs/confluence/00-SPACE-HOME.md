@@ -21,6 +21,7 @@ Følgende er satt opp og verifisert:
 - Onboarding
 - Retrospektiv
 - Delivery Contract
+- Web App Engineering Standard
 
 ## Repo og tickets
 - Repo: `https://github.com/pjdamnielsen/codex-sdlc-test`

@@ -20,6 +20,7 @@ PAGES = [
     ("Onboarding", "50-ONBOARDING.md", "SDLC Space Home"),
     ("Retrospektiv Mal", "60-RETRO-TEMPLATE.md", "SDLC Space Home"),
     ("Delivery Contract", "70-DELIVERY-CONTRACT.md", "SDLC Space Home"),
+    ("Web App Engineering Standard", "80-WEB-APP-ENGINEERING-STANDARD.md", "SDLC Space Home"),
 ]
 
 

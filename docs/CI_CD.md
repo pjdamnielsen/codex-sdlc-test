@@ -10,7 +10,9 @@
 
 CI kjører på PR og push til `main`:
 - Repo-hygiene sjekk (hindrer at `.confluence.env` eller `.auth/` blir tracked)
+- Validering av obligatoriske engineering standard-filer
 - Markdown-validering (UTF-8 + ikke tomme filer)
+- PR-policy: app `src`-endringer må ha test-/kontrakt-/docs-endring i samme PR
 - Workflow lint (`actionlint`)
 
 ## Security baseline

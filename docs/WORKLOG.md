@@ -100,3 +100,14 @@ Denne filen dokumenterer konkrete endringer i repoet.
 ### PR pre-flight
 - Oppdatert `.github/pull_request_template.md` med Delivery Contract pre-flight checklist.
 - Lagt inn direkte referanse til `docs/confluence/70-DELIVERY-CONTRACT.md`.
+
+### Web App Engineering Standard
+- Opprettet ny Confluence-kildeside: `docs/confluence/80-WEB-APP-ENGINEERING-STANDARD.md`.
+- Oppdatert Confluence sync-script for å inkludere `Web App Engineering Standard`.
+- Utvidet `Delivery Contract` med obligatoriske TDD/test/kontrakt-regler.
+- Oppdatert PR-template med pre-flight-krav for test/kontrakt og coverage.
+- Oppdatert CI-policy (`.github/workflows/ci.yml`) med:
+  - validering av obligatoriske standard-filer
+  - PR-policy som krever test-/kontrakt-/docs-endring ved app `src`-endring
+- Opprettet repo-template for nye webapper under `templates/web-app/`.
+- Opprettet `docs/WEB_APP_ENGINEERING_STANDARD.md` som repo-referanse.

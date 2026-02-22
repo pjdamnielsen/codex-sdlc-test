@@ -3,6 +3,8 @@
 - [ ] Acceptance criteria are clear and testable
 - [ ] Linked issue contains goal + DoD
 - [ ] Docs impact is identified and handled
+- [ ] If app `src` changed: tests and/or contracts updated in same PR
+- [ ] TDD/Test-first evidence is described for this change
 
 Reference: `docs/confluence/70-DELIVERY-CONTRACT.md`
 
@@ -23,6 +25,8 @@ Closes #
 ## Verification
 - [ ] Lint/typecheck passed
 - [ ] Tests passed
+- [ ] Contract tests passed (if contracts changed)
+- [ ] Coverage threshold met (or justified exception)
 - [ ] Manual validation done
 
 ## Risks

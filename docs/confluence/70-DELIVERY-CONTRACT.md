@@ -31,6 +31,7 @@ Denne siden er arbeidsavtalen for hvordan vi samarbeider for høy kvalitet og fo
   - `CodeQL`
   - `Gitleaks`
 - Minst én review før merge.
+- Endringer i app-kode uten tester/kontraktoppdatering skal stoppes.
 
 5. Dokumentasjonsplikt
 - Vesentlige endringer skal oppdatere:
@@ -41,6 +42,20 @@ Denne siden er arbeidsavtalen for hvordan vi samarbeider for høy kvalitet og fo
 6. Beslutningslogg
 - Arkitekturvalg med konsekvens dokumenteres i ADR.
 - Uavklarte valg skal ikke skjules i kode.
+
+7. Test- og TDD-prinsipper
+- TDD er default for domene-/forretningslogikk.
+- Test-first brukes for API/kontrakter/integrasjoner der full TDD ikke er praktisk.
+- PR som endrer `src` skal inkludere testendringer eller kontraktendringer i samme PR.
+
+8. Modulgrenser og kontrakter
+- Alle moduler skal ha tydelig ansvar og eksplisitte grensesnitt.
+- Kontrakter (API/event/schema) er bindende mellom moduler/tjenester.
+- Endring i kontrakt krever versjonert oppdatering av kontraktstester.
+
+9. Standard for nye webapper
+- Nye apper skal starte fra repo-template i `templates/web-app/`.
+- Minimumsstruktur med `src`, `tests`, `contracts` og `docs` er obligatorisk.
 
 ## Samarbeidsrytme
 
