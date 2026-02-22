@@ -23,7 +23,8 @@ Denne siden er arbeidsavtalen for hvordan vi samarbeider for høy kvalitet og fo
 
 3. PR-flyt uten unntak
 - All kode går via `issue -> branch -> PR -> checks -> merge`.
-- Ingen direkte leveranser til `main`.
+- Ingen direkte leveranser til `main` for feature/forbedring.
+- Avvik tillates kun via dokumentert incident-unntak (se unntaksprosess).
 
 4. Kvalitetsporter
 - Required checks må være grønne:
@@ -56,6 +57,14 @@ Denne siden er arbeidsavtalen for hvordan vi samarbeider for høy kvalitet og fo
 9. Standard for nye webapper
 - Nye apper skal starte fra repo-template i `templates/web-app/`.
 - Minimumsstruktur med `src`, `tests`, `contracts` og `docs` er obligatorisk.
+
+## Unntaksprosess (incident-only)
+
+Direkte endringer mot `main` kan kun skje ved kritisk incident:
+- incident-id opprettet
+- risiko og rollback-plan dokumentert
+- post-incident PR opprettes for å dokumentere varig løsning
+- avvik logges i `WORKLOG` og gjennomgås i neste governance-review
 
 ## Samarbeidsrytme
 

@@ -13,6 +13,7 @@ CI kjører på PR og push til `main`:
 - Validering av obligatoriske engineering standard-filer
 - Markdown-validering (UTF-8 + ikke tomme filer)
 - PR-policy: app `src`-endringer må ha test-/kontrakt-/docs-endring i samme PR
+- PR-policy: arkitektur-/kontraktendringer må ha ADR-oppdatering i `docs/adr/`
 - Workflow lint (`actionlint`)
 
 ## Security baseline

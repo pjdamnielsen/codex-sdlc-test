@@ -32,6 +32,8 @@ Denne standarden er obligatorisk for alle nye webapplikasjoner i dette SDLC-opps
 - All kode via issue -> branch -> PR -> checks -> merge
 - Kontrakter skal være eksplisitte (API/events/schemas)
 - Modulgrenser skal dokumenteres og respekteres
+- CODEOWNERS skal håndheve review-eierskap
+- Arkitektur-/kontraktendringer krever ADR-oppdatering
 
 ## Testing og TDD
 
@@ -53,6 +55,7 @@ PR kan ikke merges uten grønn:
 I tillegg skal CI verifisere:
 - required appstruktur finnes
 - kodeendringer i app har med test- eller kontraktendring i samme PR
+- arkitektur-/kontraktendring uten ADR skal feile
 
 ## Dokumentasjonskrav
 

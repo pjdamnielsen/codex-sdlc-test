@@ -27,6 +27,8 @@ jobs:
           required=(
             "docs/confluence/70-DELIVERY-CONTRACT.md"
             "docs/confluence/80-WEB-APP-ENGINEERING-STANDARD.md"
+            "docs/adr/README.md"
+            "docs/adr/0000-template.md"
             "templates/web-app/README.md"
           )
           for file in "${required[@]}"; do
@@ -97,6 +99,40 @@ jobs:
               "App code changed without tests/contracts/docs updates for: " + ", ".join(missing)
             )
           print("Src-to-test-or-contract policy passed.")
+          PY
+
+      - name: Enforce ADR for architecture/contract changes
+        if: ${{ github.event_name == 'pull_request' }}
+        env:
+          BASE_SHA: ${{ github.event.pull_request.base.sha }}
+          HEAD_SHA: ${{ github.event.pull_request.head.sha }}
+        run: |
+          set -euo pipefail
+          git fetch --no-tags --depth=200 origin "${BASE_SHA}" "${HEAD_SHA}" || true
+          python3 - <<'PY'
+          import os
+          import subprocess
+
+          base = os.environ["BASE_SHA"]
+          head = os.environ["HEAD_SHA"]
+          changed = subprocess.check_output(
+              ["git", "diff", "--name-only", f"{base}...{head}"], text=True
+          ).splitlines()
+
+          touches_arch = any(
+              p.startswith("apps/") and (
+                  "/contracts/" in p or
+                  p.endswith("/docs/ARCHITECTURE.md")
+              )
+              for p in changed
+          )
+
+          touches_adr = any(p.startswith("docs/adr/") and p.endswith(".md") for p in changed)
+          if touches_arch and not touches_adr:
+              raise SystemExit(
+                  "Architecture/contracts changed without ADR update in docs/adr/."
+              )
+          print("ADR policy passed.")
           PY
 
       - name: Lint GitHub Actions workflows

@@ -115,3 +115,13 @@ Denne filen dokumenterer konkrete endringer i repoet.
 ### App bootstrap checklist
 - Opprettet ny issue-template: `.github/ISSUE_TEMPLATE/new_app_bootstrap.md`.
 - Template håndhever obligatoriske pre-code artefakter, template-init, test/TDD-plan og kontrakt/arkitektur-checkpoints.
+
+### Governance hardening (1-4 + routine)
+- Opprettet CODEOWNERS for obligatorisk eierskap/review.
+- Opprettet ADR-regime i `docs/adr/` med template og index.
+- Opprettet Confluence-rutine: `90-SCALING-GOVERNANCE-ROUTINE.md` for timing av tiltak 5-9.
+- Strammet branch protection på `main`: admin enforcement aktivert, stale reviews dismisses, code-owner review påkrevd.
+- Opprettet `.github/CODEOWNERS` for tydelig review-eierskap.
+- Opprettet ADR-regime (`docs/adr/`) med template og index.
+- Oppdatert CI med ADR-krav ved arkitektur-/kontraktendringer.
+- Opprettet Confluence-rutine for timing av tiltak 5-9 (`90-SCALING-GOVERNANCE-ROUTINE.md`).
