@@ -125,3 +125,8 @@ Denne filen dokumenterer konkrete endringer i repoet.
 - Opprettet ADR-regime (`docs/adr/`) med template og index.
 - Oppdatert CI med ADR-krav ved arkitektur-/kontraktendringer.
 - Opprettet Confluence-rutine for timing av tiltak 5-9 (`90-SCALING-GOVERNANCE-ROUTINE.md`).
+
+### Session pre-flight standard
+- Opprettet `scripts/session_preflight.sh` for obligatorisk prosjektkontekst-sjekk i starten av hver ny tråd.
+- Opprettet `docs/SESSION_PREFLIGHT.md` med rutine og arbeidsregel.
+- Opprettet Confluence-kilde `docs/confluence/95-SESSION-PREFLIGHT.md`.

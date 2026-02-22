@@ -22,6 +22,7 @@ PAGES = [
     ("Delivery Contract", "70-DELIVERY-CONTRACT.md", "SDLC Space Home"),
     ("Web App Engineering Standard", "80-WEB-APP-ENGINEERING-STANDARD.md", "SDLC Space Home"),
     ("Scaling Governance Routine", "90-SCALING-GOVERNANCE-ROUTINE.md", "SDLC Space Home"),
+    ("Session Pre-Flight Routine", "95-SESSION-PREFLIGHT.md", "SDLC Space Home"),
 ]
 
 

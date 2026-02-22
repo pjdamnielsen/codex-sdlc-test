@@ -23,6 +23,7 @@ Følgende er satt opp og verifisert:
 - Delivery Contract
 - Web App Engineering Standard
 - Scaling Governance Routine
+- Session Pre-Flight Routine
 
 ## Repo og tickets
 - Repo: `https://github.com/pjdamnielsen/codex-sdlc-test`
