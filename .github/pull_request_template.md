@@ -5,6 +5,7 @@
 - [ ] Docs impact is identified and handled
 - [ ] If app `src` changed: tests and/or contracts updated in same PR
 - [ ] TDD/Test-first evidence is described for this change
+- [ ] If architecture/contracts changed: ADR reference added (`docs/adr/`)
 
 Reference: `docs/confluence/70-DELIVERY-CONTRACT.md`
 
@@ -36,3 +37,4 @@ Any known risk, migration, or rollback concern?
 - [ ] README updated (if needed)
 - [ ] WORKLOG updated
 - [ ] SDLC/CONTRIBUTING updated (if needed)
+- [ ] ADR added/updated if architecture boundary changed

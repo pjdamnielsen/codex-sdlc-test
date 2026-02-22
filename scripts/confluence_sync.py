@@ -21,6 +21,7 @@ PAGES = [
     ("Retrospektiv Mal", "60-RETRO-TEMPLATE.md", "SDLC Space Home"),
     ("Delivery Contract", "70-DELIVERY-CONTRACT.md", "SDLC Space Home"),
     ("Web App Engineering Standard", "80-WEB-APP-ENGINEERING-STANDARD.md", "SDLC Space Home"),
+    ("Scaling Governance Routine", "90-SCALING-GOVERNANCE-ROUTINE.md", "SDLC Space Home"),
 ]
 
 

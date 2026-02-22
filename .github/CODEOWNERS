@@ -1,0 +1,15 @@
+# Default owner
+* @pjdamnielsen
+
+# Governance and automation
+/.github/ @pjdamnielsen
+/scripts/ @pjdamnielsen
+
+# SDLC and process docs
+/docs/ @pjdamnielsen
+/docs/confluence/ @pjdamnielsen
+/docs/adr/ @pjdamnielsen
+
+# App code ownership (all current/future apps)
+/apps/ @pjdamnielsen
+/templates/ @pjdamnielsen

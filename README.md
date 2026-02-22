@@ -11,11 +11,13 @@ Testrepo for SDLC-oppsett styrt fra Codex.
 - `/Users/pjdn/Documents/Codex projects/docs/CONFLUENCE_SYNC.md`: oppsett for automatisk synk mellom repo og Confluence.
 - `/Users/pjdn/Documents/Codex projects/docs/CI_CD.md`: CI/CD- og sikkerhetsbaseline, inkludert branch protection.
 - `/Users/pjdn/Documents/Codex projects/docs/WEB_APP_ENGINEERING_STANDARD.md`: obligatorisk standard for nye webapper.
+- `/Users/pjdn/Documents/Codex projects/docs/adr/`: Architecture Decision Records (ADR) med template og indeks.
 - `/Users/pjdn/Documents/Codex projects/docs/RELEASES.md`: versjonering og release-flyt.
 - `/Users/pjdn/Documents/Codex projects/docs/DEPLOYMENT.md`: deploy-baseline for `dev` med AWS OIDC-klargjøring.
 - `/Users/pjdn/Documents/Codex projects/docs/PROCESS_VALIDATION.md`: dokumentasjon av testet issue->PR->merge flyt.
 - `/Users/pjdn/Documents/Codex projects/templates/web-app/`: repo-template for nye webapper.
 - `/Users/pjdn/Documents/Codex projects/.github/ISSUE_TEMPLATE/new_app_bootstrap.md`: oppstartschecklist for nye app-initiativer.
+- `/Users/pjdn/Documents/Codex projects/.github/CODEOWNERS`: obligatorisk kodeeierskap for review.
 - `/Users/pjdn/Documents/Codex projects/CHANGELOG.md`: historikk over versjoner og endringer.
 - `/Users/pjdn/Documents/Codex projects/VERSION`: gjeldende semver.
 - `/Users/pjdn/Documents/Codex projects/CONTRIBUTING.md`: arbeidsmåte, branch/PR-regler og kvalitetskrav.
